@@ -1,0 +1,22 @@
+{
+  "units": [
+    {"id": 1, "nom_unite": "Celsius", "symbole": "°C", "type_variable": "temperature"},
+    {"id": 2, "nom_unite": "Pourcentage", "symbole": "%", "type_variable": "humidity"},
+    {"id": 3, "nom_unite": "Millimètre", "symbole": "mm", "type_variable": "precipitation"},
+    {"id": 4, "nom_unite": "Kilomètre par heure", "symbole": "km/h", "type_variable": "wind"},
+    {"id": 5, "nom_unite": "Hectopascal", "symbole": "hPa", "type_variable": "pressure"},
+    {"id": 6, "nom_unite": "Indice UV", "symbole": "", "type_variable": "uv"}
+  ],
+  "variables": [
+    {"id": 1, "code": "temperature_2m", "nom_variable": "Température à 2m", "unite_id": 1, "description": "Température de l'air à 2 mètres du sol"},
+    {"id": 2, "code": "relative_humidity_2m", "nom_variable": "Humidité relative à 2m", "unite_id": 2, "description": "Humidité relative à 2 mètres"},
+    {"id": 3, "code": "precipitation", "nom_variable": "Précipitations", "unite_id": 3, "description": "Précipitations en mm"},
+    {"id": 4, "code": "wind_speed_10m", "nom_variable": "Vitesse du vent à 10m", "unite_id": 4, "description": "Vitesse du vent à 10 mètres"},
+    {"id": 5, "code": "surface_pressure", "nom_variable": "Pression de surface", "unite_id": 5, "description": "Pression atmosphérique au sol"},
+    {"id": 6, "code": "temperature_2m_max", "nom_variable": "Température max journalière", "unite_id": 1, "description": "Température maximale du jour"},
+    {"id": 7, "code": "temperature_2m_min", "nom_variable": "Température min journalière", "unite_id": 1, "description": "Température minimale du jour"},
+    {"id": 8, "code": "precipitation_sum", "nom_variable": "Précipitations totales", "unite_id": 3, "description": "Total des précipitations du jour"},
+    {"id": 9, "code": "wind_speed_10m_max", "nom_variable": "Vitesse max du vent", "unite_id": 4, "description": "Vitesse maximale du vent du jour"},
+    {"id": 10, "code": "uv_index_max", "nom_variable": "Indice UV max", "unite_id": 6, "description": "Indice UV maximal du jour"}
+  ]
+}

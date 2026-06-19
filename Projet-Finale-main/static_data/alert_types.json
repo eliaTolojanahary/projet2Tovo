@@ -1,0 +1,7 @@
+[
+  {"id": 1, "code": "CHALEUR", "nom": "Chaleur extrême", "description": "Température dépasse le seuil critique", "severite_defaut": "high"},
+  {"id": 2, "code": "PLUIE_INTENSE", "nom": "Pluie intense", "description": "Précipitations très élevées sur une courte période", "severite_defaut": "high"},
+  {"id": 3, "code": "VENT_FORT", "nom": "Vent fort", "description": "Vitesse du vent dangereuse", "severite_defaut": "medium"},
+  {"id": 4, "code": "UV_ELEVE", "nom": "Indice UV élevé", "description": "Rayonnement UV potentiellement dangereux", "severite_defaut": "medium"},
+  {"id": 5, "code": "SECHERESSE", "nom": "Sécheresse", "description": "Absence prolongée de précipitations", "severite_defaut": "low"}
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "nom_source": "Open-Meteo",
+    "base_url": "https://api.open-meteo.com/v1/forecast",
+    "api_type": "REST",
+    "is_active": true
+  }
+]

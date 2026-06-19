@@ -1,0 +1,5 @@
+1,Tropical humide,Climat chaud et pluvieux toute l'année (côte est)
+2,Tropical de montagne,Climat frais en altitude (Hautes Terres)
+3,Semi-aride,Faibles précipitations (sud et sud-ouest)
+4,Tropical sec,Saison sèche longue (ouest)
+5,Subéquatorial,Très humide avec peu de saison sèche (nord-est)
