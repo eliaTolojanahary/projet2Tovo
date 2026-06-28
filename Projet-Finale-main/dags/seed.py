@@ -122,7 +122,7 @@ def load_alert_types(conn):
     if os.path.exists(alert_types_path):
         with open(alert_types_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        # Format attendu: {"alert_types": [{"code": "...", "libelle": "..."}, ...]}
+        # Format attendu: {"load_alert_thresholds": [{"code": "...", "libelle": "..."}, ...]}
         rows = [(a['code'], a.get('libelle')) for a in data.get('alert_types', [])]
         if not rows:
             print(f"alerts_types.json vide, utilisation de la liste par défaut")

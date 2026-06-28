@@ -1,0 +1,1 @@
+[2026-06-28T08:36:23.681+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: weather_daily_dag.extract_hourly_daily manual__2026-06-28T08:26:20.218876+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

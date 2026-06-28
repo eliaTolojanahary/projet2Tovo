@@ -1,0 +1,86 @@
+[2026-06-24T06:18:34.674+0000] {processor.py:161} INFO - Started process (PID=65) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:18:34.680+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:18:34.696+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:18:34.694+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:18:34.841+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:18:35.011+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.362 seconds
+[2026-06-24T06:19:05.836+0000] {processor.py:161} INFO - Started process (PID=125) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:19:05.837+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:19:05.839+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:19:05.838+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:19:05.848+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:19:05.873+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.086 seconds
+[2026-06-24T06:19:36.284+0000] {processor.py:161} INFO - Started process (PID=185) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:19:36.286+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:19:36.287+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:19:36.287+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:19:36.298+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:19:36.310+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.032 seconds
+[2026-06-24T06:20:06.519+0000] {processor.py:161} INFO - Started process (PID=245) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:20:06.520+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:20:06.522+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:20:06.521+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:20:06.531+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:20:06.543+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.031 seconds
+[2026-06-24T06:20:36.928+0000] {processor.py:161} INFO - Started process (PID=303) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:20:36.932+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:20:36.934+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:20:36.934+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:20:36.951+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:20:36.968+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.047 seconds
+[2026-06-24T06:21:07.548+0000] {processor.py:161} INFO - Started process (PID=363) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:21:07.551+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:21:07.559+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:21:07.558+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:07.584+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:07.607+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.077 seconds
+[2026-06-24T06:21:16.332+0000] {processor.py:161} INFO - Started process (PID=376) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:21:16.333+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:21:16.337+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:21:16.336+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:16.347+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:21:16.343+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/seed.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/seed.py", line 17
+    user=os.getenv('DB_USER', '      POSTGRES_USER: weather_user
+                              ^
+SyntaxError: unterminated string literal (detected at line 17)
+[2026-06-24T06:21:16.351+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:16.399+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.076 seconds
+[2026-06-24T06:21:19.741+0000] {processor.py:161} INFO - Started process (PID=383) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:21:19.741+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:21:19.744+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:21:19.743+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:19.758+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:19.775+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.041 seconds
+[2026-06-24T06:21:27.876+0000] {processor.py:161} INFO - Started process (PID=401) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:21:27.877+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:21:27.878+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:21:27.878+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:27.888+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:27.899+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.031 seconds
+[2026-06-24T06:21:32.852+0000] {processor.py:161} INFO - Started process (PID=417) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:21:32.853+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:21:32.855+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:21:32.855+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:32.865+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:32.878+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.032 seconds
+[2026-06-24T06:21:53.894+0000] {processor.py:161} INFO - Started process (PID=454) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:21:53.895+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:21:53.897+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:21:53.896+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:53.898+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:21:53.898+0000] {dagbag.py:334} INFO - File /opt/airflow/dags/seed.py assumed to contain no DAGs. Skipping.
+[2026-06-24T06:21:53.898+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:21:53.910+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.021 seconds
+[2026-06-24T06:22:24.018+0000] {processor.py:161} INFO - Started process (PID=514) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:22:24.018+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:22:24.020+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:22:24.020+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:22:24.021+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:22:24.021+0000] {dagbag.py:334} INFO - File /opt/airflow/dags/seed.py assumed to contain no DAGs. Skipping.
+[2026-06-24T06:22:24.022+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:22:24.034+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.022 seconds
+[2026-06-24T06:22:54.698+0000] {processor.py:161} INFO - Started process (PID=571) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:22:54.699+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:22:54.702+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:22:54.701+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:22:54.704+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:22:54.703+0000] {dagbag.py:334} INFO - File /opt/airflow/dags/seed.py assumed to contain no DAGs. Skipping.
+[2026-06-24T06:22:54.704+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:22:54.722+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.031 seconds
+[2026-06-24T06:23:24.909+0000] {processor.py:161} INFO - Started process (PID=631) to work on /opt/airflow/dags/seed.py
+[2026-06-24T06:23:24.915+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seed.py for tasks to queue
+[2026-06-24T06:23:24.921+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:23:24.921+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/seed.py
+[2026-06-24T06:23:24.925+0000] {logging_mixin.py:188} INFO - [2026-06-24T06:23:24.924+0000] {dagbag.py:334} INFO - File /opt/airflow/dags/seed.py assumed to contain no DAGs. Skipping.
+[2026-06-24T06:23:24.931+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/seed.py
+[2026-06-24T06:23:25.013+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seed.py took 0.138 seconds

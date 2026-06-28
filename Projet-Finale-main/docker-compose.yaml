@@ -58,6 +58,11 @@ x-airflow-common:
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
     AIRFLOW__CORE__FERNET_KEY: ''
+    # URL externe réelle (Codespaces) pour que les liens générés par
+    # Airflow (bouton Trigger, etc.) ne dupliquent pas le port ":8080".
+    # ⚠️ Cette URL change si le Codespace redémarre — il faudra alors
+    # la mettre à jour ici manuellement.
+    AIRFLOW__WEBSERVER__BASE_URL: https://fantastic-goggles-q747wjg46649c9x4w-8080.app.github.dev
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'true'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
@@ -66,9 +71,24 @@ x-airflow-common:
     # See https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/logging-monitoring/check-health.html#scheduler-health-check-server
     # yamllint enable rule:line-length
     AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
+    # Variables lues par extractor.py / transformer.py / quality.py / reporter.py
+    # (via os.getenv('DB_HOST', ...)) pour se connecter à la base météo.
+    # ⚠️ Depuis l'intérieur des conteneurs Airflow, "localhost" ne fonctionne
+    # PAS : il faut utiliser le nom du service Docker "postgres-weather"
+    # et son port INTERNE 5432 (pas 5433, qui est le mapping externe pour
+    # un accès depuis ton terminal Codespace).
+    DB_HOST: postgres-weather
+    DB_PORT: '5432'
+    DB_NAME: weather_madagascar
+    DB_USER: weather_user
+    DB_PASSWORD: weather_pass
     # WARNING: Use _PIP_ADDITIONAL_REQUIREMENTS option ONLY for a quick checks
     # for other purpose (development, test and especially production usage) build/extend Airflow image.
-    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
+    # ⚠️ Fix temporaire : la version de `redis` embarquée dans l'image
+    # apache/airflow:2.9.1 est incompatible avec kombu/celery (provoque
+    # "AttributeError: module 'redis' has no attribute 'client'" et bloque
+    # toutes les tâches en 'queued'). On force une version connue compatible.
+    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-redis==5.0.1}
     # The following line can be used to set a custom config file, stored in the local config folder
     # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
     # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
@@ -83,6 +103,8 @@ x-airflow-common:
     redis:
       condition: service_healthy
     postgres:
+      condition: service_healthy
+    postgres-weather:
       condition: service_healthy
 
 services:

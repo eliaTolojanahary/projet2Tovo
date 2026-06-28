@@ -1,9 +1,60 @@
-[
-  {"id": 1, "variable_id": 1, "seuil_min": null, "seuil_max": 38.0, "severite": "high"},
-  {"id": 2, "variable_id": 1, "seuil_min": null, "seuil_max": 35.0, "severite": "medium"},
-  {"id": 3, "variable_id": 3, "seuil_min": null, "seuil_max": 50.0, "severite": "high"},
-  {"id": 4, "variable_id": 3, "seuil_min": null, "seuil_max": 20.0, "severite": "medium"},
-  {"id": 5, "variable_id": 4, "seuil_min": null, "seuil_max": 80.0, "severite": "high"},
-  {"id": 6, "variable_id": 4, "seuil_min": null, "seuil_max": 50.0, "severite": "medium"},
-  {"id": 7, "variable_id": 10, "seuil_min": null, "seuil_max": 10.0, "severite": "medium"}
-]
+{
+  "thresholds": [
+    {
+      "variable": "temperature_2m",
+      "region_id": null,
+      "min_value": null,
+      "max_value": 38.0,
+      "alert_level": "high",
+      "message": ""
+    },
+    {
+      "variable": "temperature_2m",
+      "region_id": null,
+      "min_value": null,
+      "max_value": 35.0,
+      "alert_level": "medium",
+      "message": ""
+    },
+    {
+      "variable": "precipitation",
+      "region_id": null,
+      "min_value": null,
+      "max_value": 50.0,
+      "alert_level": "high",
+      "message": ""
+    },
+    {
+      "variable": "precipitation",
+      "region_id": null,
+      "min_value": null,
+      "max_value": 20.0,
+      "alert_level": "medium",
+      "message": ""
+    },
+    {
+      "variable": "wind_speed_10m",
+      "region_id": null,
+      "min_value": null,
+      "max_value": 80.0,
+      "alert_level": "high",
+      "message": ""
+    },
+    {
+      "variable": "wind_speed_10m",
+      "region_id": null,
+      "min_value": null,
+      "max_value": 50.0,
+      "alert_level": "medium",
+      "message": ""
+    },
+    {
+      "variable": "uv_index_max",
+      "region_id": null,
+      "min_value": null,
+      "max_value": 10.0,
+      "alert_level": "medium",
+      "message": ""
+    }
+  ]
+}
