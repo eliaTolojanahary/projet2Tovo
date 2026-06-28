@@ -1,0 +1,114 @@
+[2026-06-28T16:08:50.278+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-28T16:08:50.435+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_daily_dag.extract_hourly_daily manual__2026-06-28T16:08:36.028896+00:00 [queued]>
+[2026-06-28T16:08:50.447+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_daily_dag.extract_hourly_daily manual__2026-06-28T16:08:36.028896+00:00 [queued]>
+[2026-06-28T16:08:50.448+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2026-06-28T16:08:50.502+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_hourly_daily> on 2026-06-28 16:08:36.028896+00:00
+[2026-06-28T16:08:50.534+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=150) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-06-28T16:08:50.541+0000] {standard_task_runner.py:63} INFO - Started process 154 to run task
+[2026-06-28T16:08:50.544+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'weather_daily_dag', 'extract_hourly_daily', 'manual__2026-06-28T16:08:36.028896+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/weather_etl_dag.py', '--cfg-path', '/tmp/tmpws2uctgq']
+[2026-06-28T16:08:50.550+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask extract_hourly_daily
+[2026-06-28T16:08:50.633+0000] {task_command.py:426} INFO - Running <TaskInstance: weather_daily_dag.extract_hourly_daily manual__2026-06-28T16:08:36.028896+00:00 [running]> on host c186915320bd
+[2026-06-28T16:08:50.748+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='elia' AIRFLOW_CTX_DAG_ID='weather_daily_dag' AIRFLOW_CTX_TASK_ID='extract_hourly_daily' AIRFLOW_CTX_EXECUTION_DATE='2026-06-28T16:08:36.028896+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-28T16:08:36.028896+00:00'
+[2026-06-28T16:08:50.750+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-28T16:08:50.750+0000] {extractor.py:191} INFO - Début de l'extraction Open-Meteo (hourly)
+[2026-06-28T16:08:50.754+0000] {extractor.py:196} INFO - 22 stations à traiter
+[2026-06-28T16:08:50.754+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Antananarivo (-18.87920000, 47.50790000)
+[2026-06-28T16:08:51.353+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 1 (hourly)
+[2026-06-28T16:08:51.353+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Antsirabe (-19.86560000, 47.03330000)
+[2026-06-28T16:08:51.993+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 2 (hourly)
+[2026-06-28T16:08:51.994+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Miarinarivo (-18.87410000, 46.26060000)
+[2026-06-28T16:08:52.714+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 3 (hourly)
+[2026-06-28T16:08:52.714+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Tsiroanomandidy (-18.76670000, 46.03330000)
+[2026-06-28T16:08:53.249+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 4 (hourly)
+[2026-06-28T16:08:53.249+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Fianarantsoa (-21.45280000, 47.08550000)
+[2026-06-28T16:08:53.834+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 5 (hourly)
+[2026-06-28T16:08:53.834+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Ambositra (-20.52500000, 47.22660000)
+[2026-06-28T16:08:54.405+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 6 (hourly)
+[2026-06-28T16:08:54.405+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Fenoarivo (-18.86670000, 48.46670000)
+[2026-06-28T16:08:54.914+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 7 (hourly)
+[2026-06-28T16:08:54.914+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Farafangana (-21.77360000, 47.83190000)
+[2026-06-28T16:08:55.451+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 8 (hourly)
+[2026-06-28T16:08:55.451+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Manakara (-21.78330000, 48.01670000)
+[2026-06-28T16:08:56.031+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 9 (hourly)
+[2026-06-28T16:08:56.031+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Toamasina (-18.14920000, 49.40230000)
+[2026-06-28T16:08:56.549+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 10 (hourly)
+[2026-06-28T16:08:56.550+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Fenoarivo Anj (-17.41670000, 49.16670000)
+[2026-06-28T16:08:57.099+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 11 (hourly)
+[2026-06-28T16:08:57.100+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Ambatondrazaka (-17.83330000, 48.41670000)
+[2026-06-28T16:08:57.620+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 12 (hourly)
+[2026-06-28T16:08:57.621+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Mahajanga (-15.71670000, 46.31670000)
+[2026-06-28T16:08:58.167+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 13 (hourly)
+[2026-06-28T16:08:58.168+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Antsohihy (-14.86670000, 48.76670000)
+[2026-06-28T16:09:28.458+0000] {extractor.py:85} ERROR - Erreur API Open-Meteo (hourly): HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)
+[2026-06-28T16:09:28.458+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Maevatanana (-16.38330000, 46.83330000)
+[2026-06-28T16:09:58.722+0000] {extractor.py:85} ERROR - Erreur API Open-Meteo (hourly): HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)
+[2026-06-28T16:09:58.722+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Melaky (-16.99360000, 44.71390000)
+[2026-06-28T16:10:29.024+0000] {extractor.py:85} ERROR - Erreur API Open-Meteo (hourly): HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)
+[2026-06-28T16:10:29.048+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Toliara (-23.35140000, 43.66670000)
+[2026-06-28T16:10:59.331+0000] {extractor.py:85} ERROR - Erreur API Open-Meteo (hourly): HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)
+[2026-06-28T16:10:59.357+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Ambovombe (-25.16670000, 46.11670000)
+[2026-06-28T16:10:59.997+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 18 (hourly)
+[2026-06-28T16:10:59.999+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Tolanaro (-25.03000000, 46.98000000)
+[2026-06-28T16:11:00.536+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 19 (hourly)
+[2026-06-28T16:11:00.537+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Morondava (-20.28410000, 44.31610000)
+[2026-06-28T16:11:01.080+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 20 (hourly)
+[2026-06-28T16:11:01.081+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Antsiranana (-12.26280000, 49.28610000)
+[2026-06-28T16:11:01.608+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 21 (hourly)
+[2026-06-28T16:11:01.608+0000] {extractor.py:201} INFO - [hourly] Traitement de Station Sambava (-14.26670000, 50.16670000)
+[2026-06-28T16:11:02.306+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 22 (hourly)
+[2026-06-28T16:11:02.313+0000] {extractor.py:208} INFO - Extraction hourly terminée: 18/22 succès
+[2026-06-28T16:11:02.328+0000] {extractor.py:191} INFO - Début de l'extraction Open-Meteo (daily)
+[2026-06-28T16:11:02.368+0000] {extractor.py:196} INFO - 22 stations à traiter
+[2026-06-28T16:11:02.370+0000] {extractor.py:201} INFO - [daily] Traitement de Station Antananarivo (-18.87920000, 47.50790000)
+[2026-06-28T16:11:02.922+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 1 (daily)
+[2026-06-28T16:11:02.923+0000] {extractor.py:201} INFO - [daily] Traitement de Station Antsirabe (-19.86560000, 47.03330000)
+[2026-06-28T16:11:03.450+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 2 (daily)
+[2026-06-28T16:11:03.450+0000] {extractor.py:201} INFO - [daily] Traitement de Station Miarinarivo (-18.87410000, 46.26060000)
+[2026-06-28T16:11:03.967+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 3 (daily)
+[2026-06-28T16:11:03.967+0000] {extractor.py:201} INFO - [daily] Traitement de Station Tsiroanomandidy (-18.76670000, 46.03330000)
+[2026-06-28T16:11:04.484+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 4 (daily)
+[2026-06-28T16:11:04.484+0000] {extractor.py:201} INFO - [daily] Traitement de Station Fianarantsoa (-21.45280000, 47.08550000)
+[2026-06-28T16:11:05.010+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 5 (daily)
+[2026-06-28T16:11:05.010+0000] {extractor.py:201} INFO - [daily] Traitement de Station Ambositra (-20.52500000, 47.22660000)
+[2026-06-28T16:11:05.617+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 6 (daily)
+[2026-06-28T16:11:05.618+0000] {extractor.py:201} INFO - [daily] Traitement de Station Fenoarivo (-18.86670000, 48.46670000)
+[2026-06-28T16:11:06.239+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 7 (daily)
+[2026-06-28T16:11:06.239+0000] {extractor.py:201} INFO - [daily] Traitement de Station Farafangana (-21.77360000, 47.83190000)
+[2026-06-28T16:11:06.772+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 8 (daily)
+[2026-06-28T16:11:06.772+0000] {extractor.py:201} INFO - [daily] Traitement de Station Manakara (-21.78330000, 48.01670000)
+[2026-06-28T16:11:37.000+0000] {extractor.py:85} ERROR - Erreur API Open-Meteo (daily): HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)
+[2026-06-28T16:11:37.000+0000] {extractor.py:201} INFO - [daily] Traitement de Station Toamasina (-18.14920000, 49.40230000)
+[2026-06-28T16:12:07.494+0000] {extractor.py:85} ERROR - Erreur API Open-Meteo (daily): HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)
+[2026-06-28T16:12:07.494+0000] {extractor.py:201} INFO - [daily] Traitement de Station Fenoarivo Anj (-17.41670000, 49.16670000)
+[2026-06-28T16:12:37.680+0000] {extractor.py:85} ERROR - Erreur API Open-Meteo (daily): HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)
+[2026-06-28T16:12:37.680+0000] {extractor.py:201} INFO - [daily] Traitement de Station Ambatondrazaka (-17.83330000, 48.41670000)
+[2026-06-28T16:13:08.039+0000] {extractor.py:85} ERROR - Erreur API Open-Meteo (daily): HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)
+[2026-06-28T16:13:08.041+0000] {extractor.py:201} INFO - [daily] Traitement de Station Mahajanga (-15.71670000, 46.31670000)
+[2026-06-28T16:13:08.620+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 13 (daily)
+[2026-06-28T16:13:08.621+0000] {extractor.py:201} INFO - [daily] Traitement de Station Antsohihy (-14.86670000, 48.76670000)
+[2026-06-28T16:13:09.132+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 14 (daily)
+[2026-06-28T16:13:09.132+0000] {extractor.py:201} INFO - [daily] Traitement de Station Maevatanana (-16.38330000, 46.83330000)
+[2026-06-28T16:13:09.698+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 15 (daily)
+[2026-06-28T16:13:09.698+0000] {extractor.py:201} INFO - [daily] Traitement de Station Melaky (-16.99360000, 44.71390000)
+[2026-06-28T16:13:10.214+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 16 (daily)
+[2026-06-28T16:13:10.214+0000] {extractor.py:201} INFO - [daily] Traitement de Station Toliara (-23.35140000, 43.66670000)
+[2026-06-28T16:13:10.725+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 17 (daily)
+[2026-06-28T16:13:10.725+0000] {extractor.py:201} INFO - [daily] Traitement de Station Ambovombe (-25.16670000, 46.11670000)
+[2026-06-28T16:13:11.251+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 18 (daily)
+[2026-06-28T16:13:11.252+0000] {extractor.py:201} INFO - [daily] Traitement de Station Tolanaro (-25.03000000, 46.98000000)
+[2026-06-28T16:13:11.778+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 19 (daily)
+[2026-06-28T16:13:11.779+0000] {extractor.py:201} INFO - [daily] Traitement de Station Morondava (-20.28410000, 44.31610000)
+[2026-06-28T16:13:12.299+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 20 (daily)
+[2026-06-28T16:13:12.299+0000] {extractor.py:201} INFO - [daily] Traitement de Station Antsiranana (-12.26280000, 49.28610000)
+[2026-06-28T16:13:12.886+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 21 (daily)
+[2026-06-28T16:13:12.887+0000] {extractor.py:201} INFO - [daily] Traitement de Station Sambava (-14.26670000, 50.16670000)
+[2026-06-28T16:13:13.435+0000] {extractor.py:99} INFO - weather_raw sauvegardé pour location 22 (daily)
+[2026-06-28T16:13:13.435+0000] {extractor.py:208} INFO - Extraction daily terminée: 18/22 succès
+[2026-06-28T16:13:13.439+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-28T16:13:13.441+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-28T16:13:13.470+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=weather_daily_dag, task_id=extract_hourly_daily, run_id=manual__2026-06-28T16:08:36.028896+00:00, execution_date=20260628T160836, start_date=20260628T160850, end_date=20260628T161313
+[2026-06-28T16:13:13.615+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-28T16:13:13.716+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-28T16:13:13.719+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

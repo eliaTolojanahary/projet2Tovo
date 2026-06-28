@@ -70,7 +70,7 @@ def load_variables(conn):
     couvrant les variables utilisées par le pipeline (current/hourly/daily
     Open-Meteo) pour ne pas bloquer le reste du seed.
     """
-    variables_path = 'static_data/variables.json'
+    variables_path = 'static_data/units_and_variables.json'
 
     default_variables = [
         ('temperature_2m', '°C', 'Température à 2 mètres'),
@@ -106,12 +106,12 @@ def load_variables(conn):
 
 def load_alert_types(conn):
     """
-    Charge les types d'alerte (alerts_types.json d'Amboara).
-    Indispensable : reporter.py fait `SELECT id FROM alert_types WHERE code=%s`.
-    Si le fichier n'existe pas encore, charge une liste par défaut couvrant
-    les codes déjà utilisés dans reporter.py (CHALEUR, PLUIE_INTENSE, VENT_FORT).
+    Charge les types d'alerte (alert_types.json d'Amboara).
+    Format RÉEL du fichier : une LISTE brute d'objets avec les clés
+    'code' et 'nom' (pas 'libelle') :
+    [{"id":1,"code":"CHALEUR","nom":"Chaleur extrême",...}, ...]
     """
-    alert_types_path = 'static_data/alerts_types.json'
+    alert_types_path = 'static_data/alert_types.json'
 
     default_alert_types = [
         ('CHALEUR', 'Alerte chaleur'),
@@ -122,10 +122,12 @@ def load_alert_types(conn):
     if os.path.exists(alert_types_path):
         with open(alert_types_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        # Format attendu: {"load_alert_thresholds": [{"code": "...", "libelle": "..."}, ...]}
-        rows = [(a['code'], a.get('libelle')) for a in data.get('alert_types', [])]
+        # Tolère les deux formats : liste brute (le vrai format) ou {"alert_types": [...]}
+        items = data if isinstance(data, list) else data.get('alert_types', [])
+        # Le fichier réel utilise 'nom', pas 'libelle'
+        rows = [(a['code'], a.get('nom') or a.get('libelle')) for a in items]
         if not rows:
-            print(f"alerts_types.json vide, utilisation de la liste par défaut")
+            print(f"alert_types.json vide, utilisation de la liste par défaut")
             rows = default_alert_types
     else:
         print(f"Fichier non trouvé: {alert_types_path} — utilisation de la liste par défaut")
