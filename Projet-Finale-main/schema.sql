@@ -92,25 +92,8 @@ CREATE TABLE IF NOT EXISTS weather_clean (
     UNIQUE(location_id, variable_id, timestamp)
 );
 
--- Mesures météo "classiques" en colonnes (utilisée par extractor.py
--- pour l'API current avec écriture directe, en parallèle de weather_raw).
-CREATE TABLE IF NOT EXISTS weather_measurements (
-    id SERIAL PRIMARY KEY,
-    location_id INTEGER REFERENCES weather_locations(id),
-    measurement_time TIMESTAMP NOT NULL,
-    temperature_c DECIMAL(5,2),
-    humidity_percent DECIMAL(5,2),
-    pressure_hpa DECIMAL(7,2),
-    wind_speed_ms DECIMAL(5,2),
-    wind_direction_deg INTEGER,
-    precipitation_mm DECIMAL(6,2),
-    cloud_cover_percent DECIMAL(5,2),
-    visibility_m INTEGER,
-    weather_condition VARCHAR(100),
-    data_source VARCHAR(50),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE(location_id, measurement_time)
-);
+-- Mesures météo "classiques" en colonnes : SUPPRIMÉE (ancienne logique
+-- OpenWeatherMap, jamais alimentée par le pipeline Open-Meteo actuel).
 
 -- Agrégations journalières — alimentée par transformer.py (run_aggregate)
 -- et lue par reporter.py.
@@ -129,22 +112,7 @@ CREATE TABLE IF NOT EXISTS weather_daily (
     UNIQUE(location_id, date)
 );
 
--- Conservée pour compatibilité (équivalent agrégat alternatif, non
--- utilisée directement par les scripts actuels mais gardée au cas où).
-CREATE TABLE IF NOT EXISTS daily_aggregates (
-    id SERIAL PRIMARY KEY,
-    location_id INTEGER REFERENCES weather_locations(id),
-    date DATE NOT NULL,
-    avg_temp_c DECIMAL(5,2),
-    min_temp_c DECIMAL(5,2),
-    max_temp_c DECIMAL(5,2),
-    total_precipitation_mm DECIMAL(8,2),
-    avg_humidity_percent DECIMAL(5,2),
-    avg_wind_speed_ms DECIMAL(5,2),
-    data_completeness_pct DECIMAL(5,2),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE(location_id, date)
-);
+-- Agrégat alternatif : SUPPRIMÉ (doublon non utilisé de weather_daily).
 
 
 -- ──────────────────────────────────────────────
@@ -229,14 +197,8 @@ CREATE INDEX IF NOT EXISTS idx_weather_raw_location_type
     ON weather_raw(location_id, api_type);
 CREATE INDEX IF NOT EXISTS idx_weather_clean_location_var_ts
     ON weather_clean(location_id, variable_id, timestamp);
-CREATE INDEX IF NOT EXISTS idx_weather_measurements_location_time
-    ON weather_measurements(location_id, measurement_time);
-CREATE INDEX IF NOT EXISTS idx_weather_measurements_time
-    ON weather_measurements(measurement_time);
 CREATE INDEX IF NOT EXISTS idx_weather_daily_date
     ON weather_daily(date);
-CREATE INDEX IF NOT EXISTS idx_daily_aggregates_date
-    ON daily_aggregates(date);
 CREATE INDEX IF NOT EXISTS idx_weather_report_date
     ON weather_report(date);
 CREATE INDEX IF NOT EXISTS idx_alerts_created
