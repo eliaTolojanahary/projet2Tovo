@@ -1,4 +1,4 @@
-id,nom_region,chef_lieu,latitude,longitude,altitude_moyenne,climate_type_id,timezone_id
+id,nom,chef_lieu,latitude,longitude,altitude_moyenne,climate_type_id,timezone_id
 1,Analamanga,Antananarivo,-18.8792,47.5079,1280,2,1
 2,Vakinankaratra,Antsirabe,-19.8656,47.0333,1500,2,1
 3,Itasy,Miarinarivo,-18.8741,46.2606,1200,2,1
