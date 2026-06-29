@@ -10,6 +10,8 @@ DB_HOST=aws-1-eu-west-2.pooler.supabase.com DB_PORT=5432 DB_NAME=postgres DB_USE
 
 docker exec -i $(docker-compose ps -q postgres-weather) pg_dump -U weather_user -d weather_madagascar -t weather_raw -t weather_clean -t weather_daily -t weather_report -t alerts -t etl_logs -t data_quality --data-only > sync_data.sql
 
+docker exec -i $(docker-compose ps -q postgres-weather) env PGPASSWORD='es9X,A%KcFFh.R$' psql -h aws-1-eu-west-2.pooler.supabase.com -p 5432 -U postgres.gzfrhsgzjwlwqsnpaqpb -d postgres < sync_data.sql
+
 declenchement manuelle 
 docker exec -it $(docker-compose ps -q airflow-webserver) airflow dags trigger weather_daily_dag
 

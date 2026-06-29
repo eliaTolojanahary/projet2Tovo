@@ -4,7 +4,7 @@
       "variable": "temperature_2m",
       "region_id": null,
       "min_value": null,
-      "max_value": 38.0,
+      "max_value": 10.0,
       "alert_level": "high",
       "message": ""
     },
@@ -12,7 +12,7 @@
       "variable": "temperature_2m",
       "region_id": null,
       "min_value": null,
-      "max_value": 35.0,
+      "max_value": 10.0,
       "alert_level": "medium",
       "message": ""
     },
@@ -20,7 +20,7 @@
       "variable": "precipitation",
       "region_id": null,
       "min_value": null,
-      "max_value": 50.0,
+      "max_value": 10.0,
       "alert_level": "high",
       "message": ""
     },
@@ -28,7 +28,7 @@
       "variable": "precipitation",
       "region_id": null,
       "min_value": null,
-      "max_value": 20.0,
+      "max_value": 10.0,
       "alert_level": "medium",
       "message": ""
     },
@@ -36,7 +36,7 @@
       "variable": "wind_speed_10m",
       "region_id": null,
       "min_value": null,
-      "max_value": 80.0,
+      "max_value": 10.0,
       "alert_level": "high",
       "message": ""
     },
